@@ -1,0 +1,87 @@
+{% extends 'home/base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block container %}
+    <div class="glide">
+        <!-- 背景遮罩 -->
+        <div class="backdrop"></div>
+        <!-- 轮播图片 -->
+        <img src="{{ url_for('static', filename='images/word.jpg') }}" alt="" style="height: 450px"/>
+    </div>
+
+    <div class="ai-module-demo ai-module-section js-module-section">
+        <div class="ai-module-header">
+            功能演示
+        </div>
+        <div class="ai-module-demo-container">
+            <div class="tech-recognition">
+                <div class="ai-container">
+                    <div class="tech-recognition-content">
+                        <div class="tech-recognition-scan" style="display: none;"></div>
+                        <div class="tech-img-content">
+                            <div class="tech-canvas-container">
+                                <div class="demo-loading" style="display: none;">
+                                    <div class="demo-loading-img"></div>
+                                    <div class="demo-loading-text">图片上传中</div>
+                                </div>
+                                <div class="demo-data-error-msg" style="display: none;"><img
+                                        src="//aip.bdstatic.com/portal-pc-node/dist/1610627249473/images/error/error.png"
+                                        alt="" class="error-img">
+                                    <div class="error-text"></div>
+                                </div>
+                                <div class="image-input">
+                                    <div class="image-input-container"><input type="text" spallcheck="false"
+                                                                              placeholder="请输入网络图片URL"
+                                                                              class="image-url">
+                                        <button class="image-button">检测</button>
+                                        <div class="image-text">或</div>
+                                        <label class="image-local"><input type="file"
+                                                                          accept="image/png, image/bmp, image/jpg, image/jpeg"
+                                                                          class="image-local-input">
+                                            本地上传
+                                        </label></div>
+                                    <div class="image-notice">
+                                        此处仅供功能展示，图片类型支持PNG、JPG、JPEG、BMP，大小不超过2M。
+                                    </div>
+                                </div>
+                                <canvas class="demo-canvas-centerlize"></canvas>
+                            </div>
+                            <div class="image-select">
+                                <div class="image-select-item"><img
+                                        src="https://ai.bdstatic.com/file/99B2587FEA584768938AA627A5F787BD"></div>
+                                <div class="image-select-item"><img
+                                        src="https://ai.bdstatic.com/file/B06E1C32BC2B4DA18075738F6AB3068A"></div>
+                                <div class="image-select-item"><img
+                                        src="https://ai.bdstatic.com/file/E3B341E338DD4531B816575B128045B4"></div>
+                                <div class="image-select-item"><img
+                                        src="https://ai.bdstatic.com/file/055B8E5AC1E541D99AA7F0BF1D1709BF"></div>
+                                <div class="image-select-item"><img
+                                        src="https://ai.bdstatic.com/file/D90E494969AE4C588DD762A35E2D7406"></div>
+                            </div>
+                        </div>
+                        <div class="demo-json">
+                            <div class="demo-collapse">
+                                <div class="demo-collapse-item">
+                                    <div class="demo-collapse-item-title demo-json-title">
+                                        识别结果
+                                    </div>
+                                    <div class="demo-collapse-item-cnt" style="height: 504px; opacity: 1;">
+                                        <ul class="result-item">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/img2word.js') }}"></script>
+{% endblock %}

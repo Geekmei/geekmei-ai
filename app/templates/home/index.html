@@ -1,0 +1,148 @@
+{% extends 'home/base.html' %}
+
+{% block container %}
+    <!-- 首页图片轮播，使用glide JS插件 -->
+    <div class="glide" id="home">
+        <!-- 轮播轨道 -->
+        <div class="glide__track" data-glide-el="track">
+            <!-- 所有轮播容器 -->
+            <div class="glide__slides">
+                <!-- 单个轮播组件 -->
+                <div class="glide__slide">
+                    <!-- 轮播标题 -->
+                    <div class="slide-caption">
+                        <h1>用创新点缀人生，让科技融入理想。</h1>
+                        <h3>
+                            科技创新大平台，智慧生活新引擎。依靠科技进步推进经济跨越式发展。用创新点缀人生，让科技融入理想。
+                        </h3>
+                        <!-- 探索按钮 -->
+                        <button class="explore-btn">探索更多</button>
+                    </div>
+                    <!-- 背景遮罩 -->
+                    <div class="backdrop"></div>
+                    <!-- 轮播图片 -->
+                    <img src="{{ url_for('static', filename='images/picture-color.jpg') }}" alt=""/>
+                </div>
+                <!-- 第二张轮播 -->
+                <div class="glide__slide">
+                    <div class="slide-caption left">
+                        <h1>科技改变世界</h1>
+                        <h3>
+                            立足科学发展，着力自主创新。加速科技进步，为全市经济社会发展提供有力支撑。凝聚科技创意，成就创新梦想。
+                        </h3>
+                        <button class="explore-btn">探索更多</button>
+                    </div>
+                    <div class="backdrop"></div>
+                    <!-- 轮播图片 -->
+                    <img src="{{ url_for('static', filename='images/word.jpg') }}" alt=""/>
+                </div>
+            </div>
+        </div>
+        <!-- glide 控制按钮 -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                >
+            </button>
+        </div>
+        <!-- glide 控制圆点 -->
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+        </div>
+    </div>
+    <!-- 内容容器 -->
+    <div class="content-wrapper">
+        <!-- 关于我们， id用来导航菜单跳转 -->
+        <section id="about-us" class="about-us">
+            <!-- 标题 -->
+            <h2 class="title1">关于我们</h2>
+            <!-- 补充说明区域 -->
+            <p class="intro">
+                为全栈的AI能力，提供端到端的应用。
+            </p>
+            <!-- 公司业务容器，栅格布局 -->
+            <div class="features">
+                <!-- 公司业务 -->
+                <div class="feature">
+                    <!-- 左侧业务图标 -->
+                    <i class="fas fa-lightbulb"></i>
+                    <!-- 右侧业务标题 -->
+                    <h4 class="feature-title">品牌AI</h4>
+                    <!-- 右侧业务内容 -->
+                    <p class="feature-content">
+                        为企业设计独特的并能完美呈现企业价值观的视觉
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h4 class="feature-title">数据报表</h4>
+                    <p class="feature-content">
+                        通过AI+大数据分析提供专业数据报表
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-microphone"></i>
+                    <h4 class="feature-title">AI语音</h4>
+                    <p class="feature-content">
+                        语音也可以AI
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- 服务流程 -->
+        <section id="service" class="service">
+            <h2 class="title1">服务内容</h2>
+            <p class="intro">
+                图片文字识别、智能拍照识物、智能照片处理等业务
+            </p>
+            <!-- 同关于我们 -->
+            <div class="services">
+                <div class="service-item">
+                    <i class="fas fa-file-signature"></i>
+                    <h2 class="service-title">图片文字识别</h2>
+                    <p class="service-content">
+                        通过图片识别图片中的文字
+                    </p>
+                    <p>
+                        <a href="/img2word/" style="color: #2e2e2e">前往体验-></a>
+                    </p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-desktop"></i>
+                    <h2 class="service-title">智能拍照识物</h2>
+                    <p class="service-content">
+                        通过照片识别照片中的物品
+                    </p>
+                    <p>
+                        <a href="/recognition" style="color: #2e2e2e">前往体验-></a>
+                    </p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h2 class="service-title">智能照片处理</h2>
+                    <p class="service-content">
+                        为黑白老照片上色
+                    </p>
+                    <p>
+                        <a href="/picture2color" style="color: #2e2e2e">前往体验-></a>
+                    </p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-user-check"></i>
+                    <h2 class="service-title">更多AI</h2>
+                    <p class="service-content">
+                        还有更多AI产品，敬请期待...
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}

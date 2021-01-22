@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="{{ url_for('static', filename='libs/scrollReveal/scrollreveal.min.js') }}"></script>
+
+    <!-- font-awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='libs/glide/glide.core.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='libs/glide/glide.theme.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    {% block styles %}
+    {% endblock styles %}
+    <title>极魅科技 - AI</title>
+</head>
+<body>
+<!-- 头部 -->
+<header class="open">
+    <div class="logo">
+        <img id="imageId" src="{{ url_for('static', filename='images/logo1.png') }}" alt="">
+    </div>
+</header>
+{% block container %}
+{% endblock container %}
+<!-- 底部信息 -->
+<footer>
+    <!-- 底部菜单 -->
+    <div class="footer-menus">
+        <!-- 联系信息 -->
+        <div class="contact-us">
+            <p class="menu-title">联系我们</p>
+            <p>地址：中国广西桂林市七星区</p>
+            <p>电话：17577300100</p>
+            <p>电子邮箱：geekmei@163.com</p>
+        </div>
+
+        <!-- 备案信息 -->
+        <p class="icp-info">
+            <a href="https://beian.miit.gov.cn/#/Integrated/index">桂ICP备 15009912号-1</a>
+        </p>
+        <!-- 版权信息 -->
+        <p class="rights">
+            &copy; 2021 极魅科技 - 版权所有
+        </p>
+        <!-- 返回顶部按钮 -->
+        <div class="scrollToTop">
+            <a href="#home"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </div>
+</footer>
+<!-- 轮播插件 -->
+<script src="{{ url_for('static', filename='libs/glide/glide.min.js') }}"></script>
+<!-- 动画组件 -->
+<script src="{{ url_for('static', filename='libs/anime/anime.min.js') }}"></script>
+<!-- 流畅滑动组件 -->
+<script src="{{ url_for('static', filename='libs/smooth-scroll/smooth-scroll.polyfills.min.js') }}"></script>
+<!-- 自定义JS文件 -->
+
+</body>
+{% block js %}
+{% endblock js %}
+</html>

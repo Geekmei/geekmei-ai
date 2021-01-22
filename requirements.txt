@@ -1,0 +1,21 @@
+baidu-aip==2.2.18.0
+certifi==2020.12.5
+chardet==4.0.0
+click==7.1.2
+Flask==1.1.2
+Flask-WTF==0.14.3
+idna==2.10
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+motor==2.3.0
+pymongo==3.11.2
+redis==3.5.3
+requests==2.25.1
+six==1.15.0
+tornado==6.1
+urllib3==1.26.2
+Werkzeug==1.0.1
+wincertstore==0.2
+WTForms==2.3.3
+WTForms-JSON==0.3.3
